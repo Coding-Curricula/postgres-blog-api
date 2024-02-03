@@ -14,6 +14,16 @@ app.get('/health', (req, res) => {
     res.send('I am alive')
 });
 
+// import routes
+const postRoutes = require('./routes/postRoutes');
+const replyRoutes = require('./routes/replyRoutes');
+const topicRoutes = require('./routes/topicRoutes');
+
+// use routes
+app.use('/topics', topicRoutes.modules);
+app.use('/posts', postRoutes.modules);
+app.use('/replies', replyRoutes.modules);
+
 app.listen(PORT, () => {
     console.log(`App listening on port ${PORT}`);
 });
