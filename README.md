@@ -25,6 +25,8 @@ Install dependencies `npm install`
 
 ## Set up PostgreSQL database
 
+![image](./psql-schema.png)
+
 Ensure your PostgreSQL database is running.
 Configure environment variables
 Create a .env file in the root directory. Add the following line, replacing <your_database_connection_string> with your actual connection string:
