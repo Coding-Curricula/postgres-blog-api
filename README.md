@@ -46,33 +46,47 @@ npm start
 The server will run on http://localhost:8080 or a port specified by your environment.
 
 ## API Endpoints
+
 Below are the available endpoints:
 
 ### Topics
 
-GET /topics: Fetch all topics
-POST /topics: Create a new topic
-GET /topics/:id: Fetch a single topic by ID
-PUT /topics/:id: Update a topic by ID
-DELETE /topics/:id: Delete a topic by ID
+Each topic has many posts and replies.
+
+| HTTP Method | Endpoint    | Description                |
+| ----------- | ----------- | -------------------------- |
+| GET         | /topics     | Fetch all topics           |
+| POST        | /topics     | Create a new topic         |
+| GET         | /topics/:id | Fetch a single topic by ID |
+| PUT         | /topics/:id | Update a topic by ID       |
+| DELETE      | /topics/:id | Delete a topic by ID       |
 
 ### Posts
 
-GET /posts: Fetch all posts
-POST /posts: Create a new post
-GET /posts/:id: Fetch a single post by ID
-PUT /posts/:id: Update a post by ID
-DELETE /posts/:id: Delete a post by ID
+Each post belongs to a topic and has many replies.
+
+| HTTP Method | Endpoint   | Description               |
+| ----------- | ---------- | ------------------------- |
+| GET         | /posts     | Fetch all posts           |
+| POST        | /posts     | Create a new post         |
+| GET         | /posts/:id | Fetch a single post by ID |
+| PUT         | /posts/:id | Update a post by ID       |
+| DELETE      | /posts/:id | Delete a post by ID       |
 
 ### Replies
 
-GET /replies: Fetch all replies
-POST /replies: Create a new reply
-GET /replies/:id: Fetch a single reply by ID
-PUT /replies/:id: Update a reply by ID
-DELETE /replies/:id: Delete a reply by ID
+Each reply belongs to a post.
+
+| HTTP Method | Endpoint     | Description                |
+| ----------- | ------------ | -------------------------- |
+| GET         | /replies     | Fetch all replies          |
+| POST        | /replies     | Create a new reply         |
+| GET         | /replies/:id | Fetch a single reply by ID |
+| PUT         | /replies/:id | Update a reply by ID       |
+| DELETE      | /replies/:id | Delete a reply by ID       |
 
 ## Testing the API
+
 Test the API endpoints using Postman or another API testing tool by sending requests to http://localhost:8080 followed by the endpoint path.
 
 For example, to create a new post, send a POST request to http://localhost:8080/posts with a JSON body containing the post details.
@@ -80,7 +94,9 @@ For example, to create a new post, send a POST request to http://localhost:8080/
 Note: You should replace "attachment:image.png" with the actual image path or URL.
 
 ## Contributing
+
 Contributions are welcome. Please follow the established coding standards and include tests for new or changed functionality.
 
 ## License
+
 This project is licensed under the MIT License. See the LICENSE file for details.
